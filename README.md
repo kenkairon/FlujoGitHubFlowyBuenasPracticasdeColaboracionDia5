@@ -15,7 +15,7 @@ echo "import matplotlib.pyplot as plt" >> analisis_ventas.py
 # Commit con convención
 ```sh
 git add analisis_ventas.py
-git commit -m "feat: Agregar visualización básica de ventas
+git commit -m "feat: Agregar visualización básica de ventas"
 ```
 - Importar matplotlib para gráficos
 - Preparar estructura para dashboard de ventas
