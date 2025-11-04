@@ -1,6 +1,8 @@
 # **Ejercicio**: Implementa GitHub Flow completo con convenciones profesionales
 Ejercicio práctico para aplicar los conceptos aprendidos.
-
+| Autor            | Fecha        | Día |
+|------------------|--------------|----------|
+| **Carlos Vásquez** |04 Noviembre 2025 | 5 |
 ## Crear feature branch descriptiva:
 ```sh
 git checkout -b feature/dashboard-ventas-v1
