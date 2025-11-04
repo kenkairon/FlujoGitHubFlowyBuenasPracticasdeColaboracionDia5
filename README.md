@@ -42,3 +42,7 @@ git push -u origin feature/dashboard-ventas-v1
 - Git y GitHub configurados completamente (de días anteriores)
 - Repositorio con historial de trabajo
 - Conocimiento básico de branches y merges (del día 4)
+
+## Quiz Evidencia
+
+![Quiz](img/gitHubFlow.png)
