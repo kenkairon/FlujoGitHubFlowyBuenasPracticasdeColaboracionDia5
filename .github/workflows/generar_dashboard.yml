@@ -1,0 +1,38 @@
+name: Generar dashboard de ventas
+
+on:
+  push:
+    paths:
+      - 'analisis_venta.py'
+      - 'requirements.txt'
+  schedule:
+    - cron: '0 6 * * *'   # se ejecuta diariamente a las 06:00 UTC (ajusta según quieras)
+  workflow_dispatch: {}   # permite ejecución manual desde la UI
+
+jobs:
+  build-and-generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Ejecutar script de generación
+        run: |
+          python analisis_venta.py
+        env:
+          # si tu script necesitara variables, las defines aquí (o mejor: Secrets)
+          # EXAMPLE_VAR: ${{ secrets.MI_SECRET }}
+          
+      - name: Subir artifact (PNG)
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard-ventas
+          path: dashboard_ventas.png
